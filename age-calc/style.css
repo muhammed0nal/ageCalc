@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+.container {
+  background-color: white;
+  width: 40%;
+  height: 500px;
+  border-radius: 15px 15px 190px 15px;
+}
+
+.input-div {
+  display: flex;
+  justify-content: space-around;
+}
+.input-div-year,
+.input-div-month,
+.input-div-day {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 25%;
+}
+.line {
+  border-bottom: 1px solid gray;
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 30px;
+  margin-top: 40px;
+  position: relative;
+}
+#sub-btn {
+  position: absolute;
+  right: -2px;
+  top: -20px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  border: 20px hsl(259, 100%, 65%) solid;
+  background-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+#sub-btn::after {
+  content: url(./img/arrow-down-solid.svg);
+  position: absolute;
+  right: -7px;
+  cursor: pointer;
+  top: -10px;
+  width: 15px;
+  color: white;
+}
+/* .line::before {
+  content: "";
+  right: -2px;
+  top: -20px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  border: 10px hsl(259, 100%, 65%) solid;
+  background-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+} */
+
+#h1-year,
+#h1-day,
+#h1-month {
+  color: hsl(259, 100%, 65%);
+  font-size: 50px;
+  margin-left: 15px;
+}
+.date {
+  padding: 20px;
+}
+#span-year,
+#span-day,
+#span-month {
+  color: hsl(0, 0%, 8%);
+  font-size: 40px;
+}
+
+input {
+  padding: 15px;
+  width: 110%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  outline: none;
+  font-size: 20px;
+  font-weight: 900;
+}
+label {
+  margin-left: 2px;
+  opacity: 70%;
+  margin-bottom: 10px;
+}
+#year-warn,
+#day-warn,
+#month-warn {
+  color: red;
+  opacity: 60%;
+  font-size: 12px;
+  margin-top: 10px;
+  display: none;
+}
